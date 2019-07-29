@@ -1,0 +1,21 @@
+{
+    "name": "funciones/funciones",
+      "description": "Compilado de funciones.",
+      "type": "package",
+      "license": "MIT",
+      "authors": [
+        {
+            "name": "Mikima",
+            "email": "mikimaclaudio@gmail.com"
+          }
+      ],
+      "minimum-stability": "dev",
+      "require": {
+        "php": ">=^5.6"
+      },
+      "autoload": {
+        "psr-4": {
+            "Funciones": "/src"
+          }
+      }
+  }

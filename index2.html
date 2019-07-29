@@ -1,0 +1,70 @@
+<html ng-app="EjerciciosApp">
+
+<head>
+    <title>Ejercicios</title>
+    <script src="angular.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="ejercicio1">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Avatar</th>
+
+                </tr>
+            </thead>
+
+            <tbody ng-repeat="pages in allData">
+
+                <tr ng-repeat="page in pages.data">
+                    <td>{{page.id}}</td>
+                    <td>{{page.first_name}}</td>
+                    <td>{{page.last_name}}</td>
+                    <td>{{page.email}}</td>
+                    <td><img src={{page.avatar}} height="42" width="42" /></td>
+                </tr>
+                <tr>
+                    <td colspan="5">Nombres y apellidos con mas de 12 caracteres: {{pages.mas12}}</td>
+                </tr>
+                <tr>
+                    <td>Porcentaje: {{pages.porcentaje}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <div ng-controller="ejercicio2">
+        Ingrese la Pagina: <input type="text " id="pageId " ng-model="pagina" />
+        <button ng-click="traerFotos(pagina) ">Traer Fotos</button>
+        <div>
+            <table ng-repeat="foto in fotos">
+                <thead>
+                    <tr>
+                        <th> {{foto.first_name}} {{foto.last_name}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src={{foto.avatar}} />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

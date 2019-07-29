@@ -1,0 +1,84 @@
+<html ng-app="EjerciciosApp">
+
+<head>
+    <title>Ejercicios</title>
+    <script src="angular.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #mas12 {
+            color: blue;
+            font-weight: bold;
+            border: 0px solid black;
+        }
+        
+        #porcentaje {
+            color: red;
+            font-weight: bold;
+            border: 0px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick=" window.location.href= 'index.html';">Volver</button>
+    <div ng-controller="ejercicio1">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Avatar</th>
+
+                </tr>
+            </thead>
+
+            <tbody ng-repeat="pages in allData">
+
+                <tr ng-repeat="page in pages.data">
+                    <br/>
+                    <td>{{page.id}}</td>
+                    <td>{{page.first_name}}</td>
+                    <td>{{page.last_name}}</td>
+                    <td>{{page.email}}</td>
+                    <td><img src={{page.avatar}} height="42" width="42" /></td>
+                </tr>
+                <tr>
+                    <td colspan="5" id="mas12">Nombres y apellidos con mas de 12 caracteres: {{pages.mas12}}</td>
+                </tr>
+                <tr>
+                    <td colspan="5" id="porcentaje">Porcentaje: {{pages.porcentaje}}</td>
+                </tr>
+                <tr>
+                    <td colspan="5" id="porcentaje"><br/></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+Para este ejercicio usaremos datos dummy de una api rest
+
+
+
+El siguiente endpoint devuelve una lista de usuarios:
+https://reqres.in/api/users?page=1
+
+
+Obtener el porcentaje de personas cuyo nombre y apellido tienen mas de 12 caracteres.
+
+

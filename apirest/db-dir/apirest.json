@@ -1,0 +1,10 @@
+{
+    "oracle-apirest": {
+        "type": "oracle",
+        "host": "NOCREADA",
+        "username": "NOCREADA",
+        "password": "NOCREADA",
+        "port": 1521,
+        "dbname": "NOCREADA"
+    }
+}

@@ -1,0 +1,41 @@
+<html ng-app="EjerciciosApp">
+
+<head>
+    <title>Ejercicios</title>
+    <script src="angular.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick=" window.location.href= 'index.html';">Volver</button>
+    <div ng-controller="ejercicio2">
+        Ingrese la Pagina: <input type="text " id="pageId " ng-model="pagina" />
+        <button ng-click="traerFotos(pagina) ">Traer Fotos</button>
+        <div>
+            <table ng-repeat="foto in fotos">
+                <thead>
+                    <tr>
+                        <th> {{foto.first_name}} {{foto.last_name}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src={{foto.avatar}} />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+    "name": "inputfilter-xss/inputfilter",
+      "description": "Evitar XSS.",
+      "type": "package",
+      "license": "MIT",
+      "authors": [
+        {
+            "name": "San Clemente",
+            "email": "sanclemente_@hotmail.com"
+          }
+      ],
+      "minimum-stability": "dev",
+      "require": {
+        "php": ">=^5.6"
+      },
+      "autoload": {
+        "psr-4": {
+            "InputFilter": "/src"
+          }
+      }
+  }
